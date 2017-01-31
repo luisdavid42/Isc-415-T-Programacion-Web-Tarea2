@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
  <head>
+ 	<style>
+ 		.listitem{ 
+    color: red;
+}
+ 	</style>
+
+
   <meta charset="utf-8"/>
   <title>About Me</title>
 </head>
@@ -12,6 +19,30 @@
     <li>Favorites:  <span id="favorites"></span>
     <li>Hometown: <span id="hometown"></span>
    </ul>
-  
+
+
+  <script>//1. Add a script tag to the bottom.
+
+  //2. Change the body style so it has a font-family of "Arial, sans-serif".
+  	document.getElementsByTagName("body")[0].style.fontFamily = "Arial, sans-serif";
+
+  //3. Replace each of the spans (nickname, favorites, hometown) with your own information.
+  	document.getElementById("nickname").innerHTML = "Cosa1";
+  	document.getElementById("favorites").innerHTML = "Cosa2";
+  	document.getElementById("hometown").innerHTML = "Cosa3";
+
+  //4. Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
+		var lista = document.getElementsByTagName("ul")[0];
+		var elementos = lista.getElementsByTagName("li");
+		for (var i = 0; i < elementos.length; i++) {
+			elementos[i].classList.add("listitem");
+		}
+
+		//var myImage = new Image(100, 200);
+		var img=document.createElement('img');
+		img.src = 'Imgs/pp.jpg';
+		document.body.appendChild(img);
+		
+  </script>
  </body>
 </html>
